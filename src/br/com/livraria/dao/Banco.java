@@ -12,7 +12,6 @@ import br.com.livraria.modelo.Autor;
 import br.com.livraria.modelo.Livro;
 import br.com.livraria.modelo.Usuario;
 
-//@Startup
 @Singleton
 @Interceptors({LogInterceptador.class})
 public class Banco {
@@ -71,22 +70,22 @@ public class Banco {
 	}
 	
 	private static void inicializaBanco() {
-		Autor silveira = new Autor(chave++, "Paulo Silveira");
-		Autor cordeiro = new Autor(chave++, "Gilliard Cordeiro");
-		Autor coelho = new Autor(chave++, "Hébert Coelho ");
+		Autor Oracle = new Autor(chave++, "Oracle");
+		Autor Youtube = new Autor(chave++, "Youtube");
+		Autor Google = new Autor(chave++, "Google ");
 		
-		autores.add(silveira);
-		autores.add(cordeiro);
-		autores.add(coelho);
+		autores.add(Oracle);
+		autores.add(Youtube);
+		autores.add(Google);
 		
-		livros.add(new Livro("Java 8 prático",silveira));
-		livros.add(new Livro("Lógica de Programação",silveira));
+		livros.add(new Livro("Java 8 ",Oracle));
+		livros.add(new Livro("Lógica de Programação",Youtube));
 
-		livros.add(new Livro("CDI: Integre as dependências",cordeiro));
-		livros.add(new Livro("JSF e JPA",cordeiro));
+		livros.add(new Livro("CDI: Integre as dependências",Youtube));
+		livros.add(new Livro("JSF e JPA",Youtube));
 
-		livros.add(new Livro("JPA Efficaz",coelho));
-		livros.add(new Livro("JSF Efficaz",coelho));
+		livros.add(new Livro("JPA Efficaz",Google));
+		livros.add(new Livro("JSF Efficaz",Google));
 		
 		usuarios.add(new Usuario("admin", "pass"));
 	}

@@ -12,7 +12,11 @@ import javax.persistence.PersistenceContext;
 
 import br.com.livraria.interceptador.LogInterceptador;
 import br.com.livraria.modelo.Autor;
-
+/**
+ * 6
+ * @author Wagner Duarte
+ * 11 de jun. de 2023
+ */
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER)
 @Interceptors({LogInterceptador.class})
